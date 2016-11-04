@@ -22,10 +22,14 @@
             <div class="col-md-10 col-sm=9">
                 <h3>{{ post.title }}</h3>
                 <div class="row">
-                    <div class="colxs9">
-                        <p>{{ post.content }}</p>
+                    <div class="colxs9 img-container">
+                        {%  if post.image %}
+                         <img src="/media/{{ post.image }}">
+                        {% endif %}
+                        <p>{{ post.content | linebreaks}}</p>
                         <p>
                             <button class="btn btn-default" onclick="location.href='/blog'">Back to Blog</button>
+                            <button class="btn btn-default"onclick="location.href='edit'">Edit</button>
                         </p>
                         <p>{{ post.published_date }} | Views {{ post.views }} | <strong>Tag</strong> {{post.tag}}</p></p>
                     </div>

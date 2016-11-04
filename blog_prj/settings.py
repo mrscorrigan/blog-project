@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'django.contrib.sites',
-    'disqus'
+    'disqus',
+    'django_forms_bootstrap',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ STATICFILES_DIRS =  (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+SITE_ID = 1
